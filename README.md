@@ -18,7 +18,7 @@
 ## Project Files
 
 ### Test Name Normalizer
-Standardizes inconsistent math competition file names using LLM-based heuristics.
+Standardizes inconsistent math competition file names using an LLM.
 
 Given a messy set of filenames from a math archive, this tool parses and reorders them into a consistent format:
 {Year} {Month or Event} {Event Type} {Division} {Test Type}
