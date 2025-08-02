@@ -5,13 +5,34 @@
 
 ## Table of Contents
 
+- [Project Files](#project-files)
+  - [Test Name Normalizer](#recursive-folder-scanner)
+  - [PDF to LaTeX Question Parser](#pdf-to-latex-question-parser)
+  - [Recursive Folder Scanner](#recursive-folder-scanner)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Dev Setup](#dev-setup)
-- [Usage](#usage)
-  - [REST API](#rest-api)
 - [Contributing](#contributing)
   - [Pull Requests](#pull-requests) 
+
+## Project Files
+
+### Test Name Normalizer
+Standardizes inconsistent math competition file names using LLM-based heuristics.
+
+Given a messy set of filenames from a math archive, this tool parses and reorders them into a consistent format:
+{Year} {Month or Event} {Event Type} {Division} {Test Type}
+It uses an LLM to handle abbreviation correction, ordering, and inference of missing data, then exports the results to CSV.
+
+### PDF to LaTeX Question Parser
+Extracts LaTeX-formatted questions and choices from MAO test PDFs.
+
+Splits a PDF into individual pages, sends them to a language model, and parses JSON-formatted questions. Extracts fields question_text and answer_choices, cleans formatting, and exports everything into a structured CSV for use in MuAlphaTester.
+
+### Recursive Folder Scanner
+Crawls Google Drive folders and collects file metadata.
+
+Recursively scans a folder in Google Drive (including subfolders) and extracts the name, URL, type, and last modified date of all PDF/image files. Results are exported into a Google Sheet for further processing by the PDF Renamer or PDF Processor.
 
 ## Getting Started
 
